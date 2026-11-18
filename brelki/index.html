@@ -204,7 +204,7 @@
 <section id="vybor">
   <div class="sec-head">
     <div><div class="num">05</div><h2 class="t">Ваш выбор</h2></div>
-    <p>Отметьте нужные варианты и нажмите «Отправить» — выбор придёт мне в мессенджер.</p>
+    <p>Отметьте нужные варианты и нажмите «Отправить» — выбор придёт мне в WhatsApp.</p>
   </div>
   <form class="order" id="order">
     <fieldset><legend>Форма мешочка</legend>
@@ -234,7 +234,7 @@
     <div class="summary" id="summary"></div>
     <div class="btns">
       <a class="btn wa" id="wa" target="_blank" rel="noopener">Отправить в WhatsApp</a>
-      <a class="btn tg" id="tg" target="_blank" rel="noopener">Отправить в Telegram</a>
+      <a class="btn tg" id="tg" target="_blank" rel="noopener" style="display:none">Отправить в Telegram</a>
       <button type="button" class="btn ghost" id="copy">Скопировать текст</button>
     </div>
     <p class="hint" id="hint"></p>
@@ -256,7 +256,7 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
 
   // === Куда приходит выбор: впишите номер WhatsApp (только цифры, с кодом страны) и логин Telegram без @ ===
-  const WHATSAPP = "";   // например "77011234567"
+  const WHATSAPP = "77476662412";   // например "77011234567"
   const TELEGRAM = "";   // например "zhazira_3d"
   const f=document.getElementById('order'), sum=document.getElementById('summary');
   const wa=document.getElementById('wa'), tg=document.getElementById('tg'), hint=document.getElementById('hint');
