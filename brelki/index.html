@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AsiaAgroFood — брелоки-мешочки, образцы на выбор</title>
+<meta name="description" content="Образцы брелоков-мешочков AsiaAgroFood: две формы и разные оттенки золотого логотипа.">
+<meta property="og:title" content="AsiaAgroFood — брелоки-мешочки, образцы на выбор">
+<meta property="og:image" content="img/vse.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f2ee; --ink:#15171c; --muted:#6b6e75; --card:#ffffff; --line:#e3e0da;
+    --blue:#1f4fc9; --gold:#c9a24a; --gold-y:#d8b33a; --gold-r:#c98b62; --gold-l:#ddb893;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;line-height:1.5}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  header{padding:56px 0 28px}
+  .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:0 0 12px}
+  h1{font-size:clamp(32px,5vw,58px);line-height:1.02;margin:0 0 16px;font-weight:800;letter-spacing:-.02em}
+  h1 span{color:var(--blue)}
+  .lead{font-size:17px;color:var(--muted);max-width:640px;margin:0}
+
+  .hero{border-radius:24px;overflow:hidden;margin:28px 0 0;cursor:zoom-in;box-shadow:0 30px 60px -35px rgba(0,0,0,.45)}
+  .hero img{width:100%;aspect-ratio:3/2;object-fit:cover}
+
+  .note{margin:28px 0 0;display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:16px;padding:20px 22px}
+  .note .ic{flex:0 0 40px;height:40px;border-radius:12px;background:#e9efff;color:var(--blue);display:grid;place-items:center;font-weight:800;font-size:20px}
+  .note h2{margin:0 0 4px;font-size:18px}
+  .note p{margin:0;color:#3d4048;font-size:15.5px}
+  .note b{color:var(--blue)}
+
+  section{padding:64px 0 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+  .num{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase}
+  h2.t{font-size:clamp(24px,3vw,34px);margin:4px 0 0;font-weight:800;letter-spacing:-.01em}
+  .sec-head p{margin:0;color:var(--muted);max-width:460px;font-size:15px}
+
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+  .card .ph{cursor:zoom-in;overflow:hidden}
+  .card .ph img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .5s}
+  .card .ph:hover img{transform:scale(1.03)}
+  .card .tx{padding:16px 18px 20px}
+  .card h3{margin:0 0 6px;font-size:18px}
+  .card p{margin:0;color:var(--muted);font-size:14.5px}
+  .tag{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:4px 10px;margin-bottom:10px;background:#f1efe9;color:#5b5e65}
+
+  .swatch{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+  .dot{width:34px;height:34px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08),0 4px 10px -4px rgba(0,0,0,.35)}
+  .dot.y{background:radial-gradient(circle at 30% 30%,#fff3b0,var(--gold-y) 45%,#9c7a12)}
+  .dot.r{background:radial-gradient(circle at 30% 30%,#ffe2cf,var(--gold-r) 45%,#7d4a2c)}
+  .dot.l{background:radial-gradient(circle at 30% 30%,#fff1e2,var(--gold-l) 45%,#9a7353)}
+  .swatch h3{margin:0}
+
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .gallery button{border:0;padding:0;background:none;border-radius:14px;overflow:hidden;cursor:zoom-in}
+  .gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .4s}
+  .gallery button:hover img{transform:scale(1.04)}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+  .step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+  .step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--ink);color:#fff;font-weight:800;margin-bottom:10px}
+  .step h3{margin:0 0 4px;font-size:16px}
+  .step p{margin:0;color:var(--muted);font-size:14px}
+
+  footer{padding:64px 0 56px;color:var(--muted);font-size:14px}
+  footer a{color:var(--blue);font-weight:600;text-decoration:none}
+
+  .lb{position:fixed;inset:0;background:rgba(12,13,16,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
+  .lb.on{display:flex}
+  .lb img{max-width:100%;max-height:88vh;border-radius:12px}
+  .lb .cap{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#ddd;font-size:14px;padding:0 20px}
+  .lb .x{position:absolute;top:14px;right:18px;color:#fff;font-size:30px;line-height:1;background:none;border:0;cursor:pointer}
+
+  @media (max-width:860px){
+    .grid3,.gallery{grid-template-columns:repeat(2,1fr)}
+    .steps{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 16px}
+    header{padding:36px 0 18px}
+    .grid2,.grid3,.gallery,.steps{grid-template-columns:1fr}
+    section{padding:48px 0 0}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">AsiaAgroFood · 3D-печать</p>
+  <h1>Брелоки-мешочки<br><span>образцы на выбор</span></h1>
+  <p class="lead">Мешочек с ручкой, эмблемой и надписью AsiaAgroFood на кольце с цепочкой. Ниже — две формы мешочка и несколько оттенков золотой эмблемы.</p>
+  <div class="hero" data-full="img/vse.jpg" data-cap="Все образцы вместе"><img src="img/vse.jpg" alt="Образцы брелоков AsiaAgroFood"></div>
+
+  <div class="note">
+    <div class="ic">!</div>
+    <div>
+      <h2>Это образцы</h2>
+      <p>Надпись AsiaAgroFood на образцах <b>покрашена вручную</b>. После утверждения варианта и закупа надпись будет <b>напечатана синим цветом</b> — ровно и одинаково на каждом брелоке.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="sec-head">
+    <div><div class="num">01</div><h2 class="t">Две формы мешочка</h2></div>
+    <p>Выберите форму корпуса. Размер, ручка и кольцо одинаковые.</p>
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <div class="ph" data-full="img/sboku.jpg" data-cap="Полная форма — вид сбоку"><img src="img/sboku.jpg" alt="Полная форма, вид сбоку"></div>
+      <div class="tx"><span class="tag">Форма 1</span><h3>Полная</h3><p>Объёмный, «наполненный» мешочек с гладкими округлыми боками — как настоящий мешок с мукой.</p></div>
+    </div>
+    <div class="card">
+      <div class="ph" data-full="img/szadi.jpg" data-cap="Форма с рельефом — складки и фактура ткани"><img src="img/szadi.jpg" alt="Форма с рельефом"></div>
+      <div class="tx"><span class="tag">Форма 2</span><h3>С рельефом</h3><p>Мешочек с выраженной фактурой ткани и складками — выглядит как мягкий тканевый мешок.</p></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <div class="ph" data-full="img/formy-sboku.jpg" data-cap="Сравнение: вид сбоку и спереди"><img src="img/formy-sboku.jpg" alt="Сравнение форм" style="aspect-ratio:21/9"></div>
+    <div class="tx"><h3>Сравнение</h3><p>Вид сбоку и спереди — видно, насколько отличается объём корпуса.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div><div class="num">02</div><h2 class="t">Оттенки золотой эмблемы</h2></div>
+    <p>Эмблема печатается золотистым пластиком. Доступны разные оттенки — выберите тот, что ближе к фирменному стилю.</p>
+  </div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ph" data-full="img/dva-zolota.jpg" data-cap="Слева — жёлтое золото, справа — розовое золото"><img src="img/dva-zolota.jpg" alt="Жёлтое и розовое золото"></div>
+      <div class="tx"><div class="swatch"><div class="dot y"></div><h3>Жёлтое золото</h3></div><p>Яркий классический золотой. На фото — левый брелок.</p></div>
+    </div>
+    <div class="card">
+      <div class="ph" data-full="img/formy-sboku.jpg" data-cap="Розовое золото с металлическим блеском"><img src="img/formy-sboku.jpg" alt="Розовое золото"></div>
+      <div class="tx"><div class="swatch"><div class="dot r"></div><h3>Розовое золото</h3></div><p>Тёплый медно-розовый оттенок с блеском. На первом фото — правый брелок.</p></div>
+    </div>
+    <div class="card">
+      <div class="ph" data-full="img/rozovoe-zoloto.jpg" data-cap="Светлое розовое золото"><img src="img/rozovoe-zoloto.jpg" alt="Светлое розовое золото"></div>
+      <div class="tx"><div class="swatch"><div class="dot l"></div><h3>Светлое розовое золото</h3></div><p>Мягкий светлый оттенок, более деликатный на белом мешочке.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div><div class="num">03</div><h2 class="t">Все фото образцов</h2></div>
+    <p>Нажмите на фото, чтобы рассмотреть крупно.</p>
+  </div>
+  <div class="gallery">
+    <button data-full="img/vse.jpg" data-cap="Все образцы вместе"><img src="img/vse.jpg" alt=""></button>
+    <button data-full="img/dva-zolota.jpg" data-cap="Жёлтое и розовое золото"><img src="img/dva-zolota.jpg" alt=""></button>
+    <button data-full="img/formy-sboku.jpg" data-cap="Сравнение форм"><img src="img/formy-sboku.jpg" alt=""></button>
+    <button data-full="img/rozovoe-zoloto.jpg" data-cap="Светлое розовое золото"><img src="img/rozovoe-zoloto.jpg" alt=""></button>
+    <button data-full="img/sboku.jpg" data-cap="Вид сбоку"><img src="img/sboku.jpg" alt=""></button>
+    <button data-full="img/szadi.jpg" data-cap="Вид сзади"><img src="img/szadi.jpg" alt=""></button>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div><div class="num">04</div><h2 class="t">Как заказать</h2></div>
+  </div>
+  <div class="steps">
+    <div class="step"><h3>Форма</h3><p>Полная или с рельефом.</p></div>
+    <div class="step"><h3>Оттенок золота</h3><p>Жёлтое, розовое или светлое розовое.</p></div>
+    <div class="step"><h3>Утверждение и закуп</h3><p>Согласуем вариант и количество.</p></div>
+    <div class="step"><h3>Печать</h3><p>Тираж с надписью, напечатанной синим цветом.</p></div>
+  </div>
+</section>
+
+<footer>
+  Также смотрите варианты <a href="../">подставок для телефона AsiaAgroFood</a> в 3D.
+</footer>
+</div>
+
+<div class="lb" id="lb"><button class="x" aria-label="Закрыть">×</button><img alt=""><div class="cap"></div></div>
+<script>
+  const lb=document.getElementById('lb'), lbImg=lb.querySelector('img'), lbCap=lb.querySelector('.cap');
+  document.querySelectorAll('[data-full]').forEach(el=>el.addEventListener('click',()=>{
+    lbImg.src=el.dataset.full; lbCap.textContent=el.dataset.cap||''; lb.classList.add('on');
+  }));
+  lb.addEventListener('click',()=>lb.classList.remove('on'));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+</script>
+</body>
+</html>
