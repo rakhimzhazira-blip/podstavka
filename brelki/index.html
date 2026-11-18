@@ -72,6 +72,28 @@
   footer{padding:64px 0 56px;color:var(--muted);font-size:14px}
   footer a{color:var(--blue);font-weight:600;text-decoration:none}
 
+
+  .order{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;gap:18px}
+  fieldset{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+  legend{font-weight:800;font-size:15px;margin-bottom:10px;padding:0}
+  .opt input{position:absolute;opacity:0;pointer-events:none}
+  .opt span{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:600;font-size:14.5px;cursor:pointer;transition:.15s;background:#faf9f6}
+  .opt input:checked+span{border-color:var(--blue);background:#e9efff;color:var(--blue)}
+  .opt input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+  .dot.sm{width:16px;height:16px;display:inline-block}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .fld{display:grid;gap:6px;font-weight:700;font-size:14px}
+  .fld input,.fld textarea{font:inherit;font-weight:500;border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;background:#faf9f6;resize:vertical}
+  .fld input:focus,.fld textarea:focus{outline:none;border-color:var(--blue);background:#fff}
+  .summary{background:#f4f2ee;border-radius:12px;padding:14px 16px;font-size:14px;white-space:pre-line;color:#33363d}
+  .btns{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:13px 20px;font:inherit;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none;color:#fff}
+  .btn.wa{background:#1fa855}.btn.tg{background:#229ed9}
+  .btn.ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+  .btn.off{opacity:.45;pointer-events:none}
+  .hint{margin:0;color:var(--muted);font-size:13.5px;min-height:1em}
+  @media (max-width:560px){.row2{grid-template-columns:1fr}.btn{flex:1 1 100%}}
+
   .lb{position:fixed;inset:0;background:rgba(12,13,16,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
   .lb.on{display:flex}
   .lb img{max-width:100%;max-height:88vh;border-radius:12px}
@@ -149,7 +171,23 @@
 
 <section>
   <div class="sec-head">
-    <div><div class="num">03</div><h2 class="t">Все фото образцов</h2></div>
+    <div><div class="num">03</div><h2 class="t">Цепочка и размер</h2></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><div class="tx">
+      <span class="tag">Цепочка</span><h3>Золотистая или серебристая</h3>
+      <p>На образцах — золотистая цепочка и кольцо, подобраны под цвет логотипа. По желанию можно заменить на серебристую фурнитуру.</p>
+    </div></div>
+    <div class="card"><div class="tx">
+      <span class="tag">Размер</span><h3>Можно уменьшить максимум на 1 см</h3>
+      <p>Высота мешочка на образцах — около 6,3 см. Его можно сделать меньше, но не более чем на 1 см: при меньшем размере надпись AsiaAgroFood будет хуже читаться.</p>
+    </div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div><div class="num">04</div><h2 class="t">Все фото образцов</h2></div>
     <p>Нажмите на фото, чтобы рассмотреть крупно.</p>
   </div>
   <div class="gallery">
@@ -162,16 +200,45 @@
   </div>
 </section>
 
-<section>
+
+<section id="vybor">
   <div class="sec-head">
-    <div><div class="num">04</div><h2 class="t">Как заказать</h2></div>
+    <div><div class="num">05</div><h2 class="t">Ваш выбор</h2></div>
+    <p>Отметьте нужные варианты и нажмите «Отправить» — выбор придёт мне в мессенджер.</p>
   </div>
-  <div class="steps">
-    <div class="step"><h3>Форма</h3><p>Полная или с рельефом.</p></div>
-    <div class="step"><h3>Эмблема</h3><p>Ручная покраска в выбранный оттенок или печать пластиком «жёлтое золото».</p></div>
-    <div class="step"><h3>Утверждение и закуп</h3><p>Согласуем вариант и количество.</p></div>
-    <div class="step"><h3>Печать</h3><p>Тираж с надписью, напечатанной синим цветом.</p></div>
-  </div>
+  <form class="order" id="order">
+    <fieldset><legend>Форма мешочка</legend>
+      <label class="opt"><input type="radio" name="Форма" value="Полная" checked><span>Полная</span></label>
+      <label class="opt"><input type="radio" name="Форма" value="С рельефом"><span>С рельефом</span></label>
+    </fieldset>
+    <fieldset><legend>Эмблема</legend>
+      <label class="opt"><input type="radio" name="Эмблема" value="Печать пластиком «жёлтое золото»" checked><span><i class="dot y sm"></i>Печать пластиком «жёлтое золото»</span></label>
+      <label class="opt"><input type="radio" name="Эмблема" value="Ручная покраска — жёлтое золото"><span><i class="dot y sm"></i>Покраска — жёлтое золото</span></label>
+      <label class="opt"><input type="radio" name="Эмблема" value="Ручная покраска — розовое золото"><span><i class="dot r sm"></i>Покраска — розовое золото</span></label>
+      <label class="opt"><input type="radio" name="Эмблема" value="Ручная покраска — светлое розовое золото"><span><i class="dot l sm"></i>Покраска — светлое розовое</span></label>
+    </fieldset>
+    <fieldset><legend>Цепочка и кольцо</legend>
+      <label class="opt"><input type="radio" name="Цепочка" value="Золотистая" checked><span>Золотистая</span></label>
+      <label class="opt"><input type="radio" name="Цепочка" value="Серебристая"><span>Серебристая</span></label>
+    </fieldset>
+    <fieldset><legend>Размер</legend>
+      <label class="opt"><input type="radio" name="Размер" value="Как на образце (~6,3 см)" checked><span>Как на образце</span></label>
+      <label class="opt"><input type="radio" name="Размер" value="Меньше на 0,5 см"><span>Меньше на 0,5 см</span></label>
+      <label class="opt"><input type="radio" name="Размер" value="Меньше на 1 см"><span>Меньше на 1 см</span></label>
+    </fieldset>
+    <div class="row2">
+      <label class="fld"><span>Количество, шт.</span><input type="number" name="Количество" min="1" placeholder="Например, 100"></label>
+      <label class="fld"><span>Имя / компания</span><input type="text" name="Имя" placeholder="Как к вам обращаться"></label>
+    </div>
+    <label class="fld"><span>Комментарий</span><textarea name="Комментарий" rows="3" placeholder="Пожелания, сроки, вопросы"></textarea></label>
+    <div class="summary" id="summary"></div>
+    <div class="btns">
+      <a class="btn wa" id="wa" target="_blank" rel="noopener">Отправить в WhatsApp</a>
+      <a class="btn tg" id="tg" target="_blank" rel="noopener">Отправить в Telegram</a>
+      <button type="button" class="btn ghost" id="copy">Скопировать текст</button>
+    </div>
+    <p class="hint" id="hint"></p>
+  </form>
 </section>
 
 <footer>
@@ -187,6 +254,30 @@
   }));
   lb.addEventListener('click',()=>lb.classList.remove('on'));
   document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+
+  // === Куда приходит выбор: впишите номер WhatsApp (только цифры, с кодом страны) и логин Telegram без @ ===
+  const WHATSAPP = "";   // например "77011234567"
+  const TELEGRAM = "";   // например "zhazira_3d"
+  const f=document.getElementById('order'), sum=document.getElementById('summary');
+  const wa=document.getElementById('wa'), tg=document.getElementById('tg'), hint=document.getElementById('hint');
+  function text(){
+    const d=new FormData(f), L=["Брелоки AsiaAgroFood — выбор:"];
+    for(const k of ["Форма","Эмблема","Цепочка","Размер","Количество","Имя","Комментарий"]){
+      const v=(d.get(k)||"").toString().trim(); if(v) L.push(k+": "+v);
+    }
+    return L.join("\n");
+  }
+  function upd(){
+    const t=text(); sum.textContent=t; const e=encodeURIComponent(t);
+    if(WHATSAPP){wa.href="https://wa.me/"+WHATSAPP+"?text="+e; wa.classList.remove('off')} else wa.classList.add('off');
+    if(TELEGRAM){tg.href="https://t.me/"+TELEGRAM; tg.classList.remove('off')} else tg.classList.add('off');
+  }
+  f.addEventListener('input',upd); f.addEventListener('change',upd); upd();
+  tg.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(text()).catch(()=>{}); hint.textContent="Текст скопирован — вставьте его в чат Telegram.";});
+  document.getElementById('copy').addEventListener('click',async()=>{
+    try{await navigator.clipboard.writeText(text()); hint.textContent="Скопировано. Отправьте текст любым удобным способом.";}
+    catch(e){hint.textContent="Не удалось скопировать — выделите текст выше вручную.";}
+  });
 </script>
 </body>
 </html>
